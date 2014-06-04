@@ -3,8 +3,8 @@ global $wp_query;
 $postid = $wp_query->post->ID;?>
 <!--POST INFO START-->
 
-<img src="<?php echo getphpthumburl(get_the_content(), 'h=225&w=400&zc=1'); ?>" alt="<?php echo get_the_title(); ?>"
-     width="400" height="225"/>
+<img src="<?php echo getphpthumburl(get_the_content(), 'h=225&w=325&zc=1'); ?>" alt="<?php echo get_the_title(); ?>"
+     width="325" height="225"/>
 <div class="single_metainfo" align="center">
 
     <!--POST META INFO START-->

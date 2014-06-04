@@ -17,17 +17,26 @@
                 <div class="center">
 
                     <div class="lay4_wrap">
-                        <div class="lay4_inner">
-                            <?php
-                            $category = get_the_category();
-                            $args = array(
-                                'post_type' => 'post',
-                                'paged' => (get_query_var('paged') ? get_query_var('paged') : 1),
-                                'cat' => $category[0]->cat_ID,
-                                'posts_per_page' => '12');
-                            $the_query = new WP_Query($args);
-                            ?>
-                            <?php if ($the_query->have_posts()): ?><?php while ($the_query->have_posts()): ?><?php $the_query->the_post(); ?>
+
+                        <!--SIDEBAR START-->
+                        <?php if (is_active_sidebar('sidebar')) { ?><?php get_sidebar(); ?><?php } ?>
+                        <!--SIDEBAR END-->
+
+                        <?php
+                        $id = get_the_ID();
+                        $category = get_the_category();
+                        $args = array(
+                            'post_type' => 'post',
+                            'paged' => (get_query_var('paged') ? get_query_var('paged') : 1),
+                            'cat' => $category[0]->cat_ID,
+                            'posts_per_page' => '12',
+                            'post__not_in' => array($id),
+                        );
+                        $the_query = new WP_Query($args);
+                        //                        $the_query = query_posts($args);
+                        ?>
+                        <?php if ($the_query->have_posts()): ?><?php while ($the_query->have_posts()): ?><?php $the_query->the_post(); ?>
+                            <?php if (!in_array("page", get_post_class())) { ?>
                                 <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
                                     <?php
                                     global $wp_query;
@@ -68,10 +77,11 @@
                                         ?>
                                     </div>
                                 </div>
-                            <?php endwhile ?>
-                                <?php wp_reset_postdata(); ?>
-                            <?php endif ?>
-                        </div>
+                            <?php } ?>
+                        <?php endwhile ?>
+                            <?php wp_reset_postdata(); ?>
+                        <?php endif ?>
+
                         <!--PAGINATION START-->
                         <div class="ast_pagenav">
                             <?php
@@ -88,9 +98,7 @@
                         </div>
                         <!--PAGINATION END-->
                     </div>
-                    <!--SIDEBAR START-->
-                    <?php if (is_active_sidebar('sidebar')) { ?><?php get_sidebar(); ?><?php } ?>
-                    <!--SIDEBAR END-->
+
                 </div>
             </div>
         </div>
