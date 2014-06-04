@@ -10,12 +10,12 @@
     parse_str(parse_url($url, PHP_URL_QUERY), $my_array_of_vars);
     $id = $my_array_of_vars['v'];
     ?>
-    <object width="250" height="200">
+    <object width="325" height="225">
         <param name="movie" value="https://www.youtube.com/v/<?php echo $id; ?>?version=3"></param>
         <param name="allowFullScreen" value="true"></param>
         <param name="allowScriptAccess" value="always"></param>
         <embed src="https://www.youtube.com/v/<?php echo $id; ?>?version=3" type="application/x-shockwave-flash"
-               allowfullscreen="true" allowScriptAccess="always" width="500" height="310"></embed>
+               allowfullscreen="true" allowScriptAccess="always" width="325" height="225"></embed>
     </object>
     <!--POST META INFO START-->
     <div class="single_metainfo" align="center">

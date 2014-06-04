@@ -14,10 +14,10 @@
         </div> 
         <!--BIG PAGE HEADER END-->
 
-        <div class="lay4">
+        <div class="lay1">
             <div class="center">
 
-                <div class="lay4_wrap<?php if (!is_active_sidebar('sidebar')) { ?> no_sidebar<?php } ?>">
+                <div class="lay1_wrap<?php if (!is_active_sidebar('sidebar')) { ?> no_sidebar<?php } ?>">
                     <div class="lay1_inner">
                     
                         <?php
@@ -26,7 +26,7 @@
 //                            'cat' => '' . $asteria['blog_cat_id'] . '',
                             'cat' => '5',
                             'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
-                            'posts_per_page' => '12');
+                            'posts_per_page' => '3');
                         $the_query = new WP_Query($args);
                         ?>
                            
