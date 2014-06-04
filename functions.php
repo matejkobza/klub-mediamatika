@@ -529,5 +529,10 @@ function setPostViews($postID) {
 // Remove issues with prefetching adding extra views
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
-
+ function load_fonts() {
+            wp_register_style('googleFonts', 'https://www.google.com/fonts#ChoosePlace:select/Collection:Allura');
+            wp_enqueue_style( 'googleFonts');
+        }
+    
+    add_action('wp_print_styles', 'load_fonts');
 ?>
