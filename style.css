@@ -551,6 +551,34 @@ h3#comments_ping{color:#333333; font-size:20px;}
 .ast_maintanace{ padding-top:5%;}
 .ast_maintanace .logo, .ast_maintanace .logo h1{ float:none; text-align:center;}
 .ast_maintanace .logo h1 a{ color:#99cc33;}
+.ast_maintanace ul li {
+    float: left;
+    list-style-type: none;
+}
+.ast_maintanace .ast_countdown {
+    width: 100%;
+    text-align: center;
+}
+.ast_maintanace .timeRefDays, .ast_maintanace .timeRefHours, .ast_maintanace .timeRefMinutes, .ast_maintanace .timeRefSeconds {
+    display: none;
+}
+.ast_maintanace #countdown_mntnc {
+    /*clear: both;*/
+    /*margin: auto;*/
+    display: table;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    background: #F1F2F3;
+    /*width: 100%;*/
+}
+.ast_maintanace ul li {
+    width: auto !important;
+    padding: 5px 1px 5px 1px;
+    margin: 0px;
+}
+.ast_maintanace ul li:first-child {
+    padding-right: 10px;
+}
 .under-construction-message{ text-align:center;width:60%; margin:0 auto; margin-top:40px; margin-bottom:20px;}
 .under-construction-inner{ background:#fff; padding:2%; padding-bottom:4%; float:left; min-width:726px;}
 
