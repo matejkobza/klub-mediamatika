@@ -1,6 +1,7 @@
 <?php
 /*
-  Template Name: Fotografia
+ * DEPRECATED
+ * Template Name: Fotografia
  */
 ?>
 <?php global $asteria; ?>
@@ -47,7 +48,7 @@
 											if (current_user_can('edit_post', $post->ID)){
 											echo '<a class="delete-post" href="';
 											echo wp_nonce_url("$url/wp-admin/post.php?action=delete&post=$id", 'delete-post_' . $post->ID);
-											echo '"><i> Vymazaù</i></a>';
+											echo '"><i> VymazaÔøΩ</i></a>';
 										  }
 									?>
 									

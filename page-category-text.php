@@ -1,6 +1,7 @@
 <?php
 /*
-  Template Name: Text
+ * DEPRECATED
+ * Template Name: Text
  */
 ?>
 <?php global $asteria; ?>

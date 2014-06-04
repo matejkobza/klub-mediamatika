@@ -1,6 +1,7 @@
 <?php
 /*
-  Template Name: Audio
+ * DEPRECATED
+ * Template Name: Audio
  */
 ?>
 <?php global $asteria; ?>

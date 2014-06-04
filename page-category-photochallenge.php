@@ -1,6 +1,7 @@
 <?php
 /*
-  Template Name: fotosutaz
+ * DEPRECATED
+ * Template Name: fotosutaz
  */
 ?>
 <?php global $asteria; ?>

@@ -1,6 +1,7 @@
 <?php
 /*
-  Template Name: Video
+ * DEPRECATED
+ * Template Name: Video
  */
 ?>
 <?php global $asteria; ?>
