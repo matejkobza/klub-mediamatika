@@ -78,7 +78,7 @@
                                         break;
 				}?>?> 
                                 <!--POST CONTENT END-->
-                                <!--</div>-->
+
                             </div>
                         <?php endwhile ?> 
                         <?php ?>
