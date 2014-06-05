@@ -157,7 +157,7 @@ jQuery('.ast_pagenav a').each(function(){
 	<?php wp_reset_query();
 	$template = get_post_meta( get_the_ID(), '_wp_page_template', true );
 	
-	if( is_author() || ($template == 'page-blog.php' ) ){  ?>
+	if( is_author() || ($template == 'page-posts.php' )){  ?>
 	//Layout 4 Ajax
 	var link = jQuery(this).attr('href');
 	jQuery('.lay4_inner').html('<div class="ast_ajaxwrap"><div class="ast_ajax"></div></div>').load(link + '.lay4_inner .hentry', function(){

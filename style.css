@@ -996,11 +996,13 @@ body .header4 .bigmenu ul li:hover {
 
 .lay4_wrap {
     overflow: hidden;
-    /*width: 45%;*/
     float: left;
+    width: 70%;
+    text-align: center;
 }
-.lay4_wrap .lay4_inner {
-    /*float: left;*/
+
+div.no_sidebar {
+    width: 100%;
 }
 
 .lay4 .hentry {
@@ -1019,6 +1021,7 @@ body .header4 .bigmenu ul li:hover {
     color: #99cc33;
     max-width: 325px;
     float: left;
+    padding: 15px;
 }
 
 .lay4 .post h2.postitle {
@@ -1833,8 +1836,9 @@ h3#comments_ping {
 /*Sidebar*/
 #sidebar {
     width: 30%;
-    float: right;
-    padding-top: 0px
+    float: left;
+    padding-top: 0px;
+    background: #f1f2f3;
 }
 
 #sidebar .widgets ul {
@@ -1850,7 +1854,7 @@ h3#comments_ping {
     float: left;
     color: #999;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 #sidebar .widget .widgettitle, #sidebar .widget .widgettitle a {
@@ -2753,4 +2757,16 @@ h3#comments_ping {
 
 .widgets .widget_corner {
     display: none !important;
+}
+
+.social_buttons div a {
+    padding: 0px !important;
+}
+
+div.top_posts .post {
+    text-align: center;
+}
+
+div.clear {
+    clear: both;
 }

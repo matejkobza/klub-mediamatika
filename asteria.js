@@ -143,7 +143,7 @@ jQuery('.home_blocks').each(function () {
 		}
 });
 
-jQuery('.lay1, .lay2, .lay3, .lay4, .lay5, .lay6').not(':has(.hentry)').css({"display":"none"});
+//jQuery('.lay1, .lay2, .lay3, .lay4, .lay5, .lay6').not(':has(.hentry)').css({"display":"none"});
 
 //WAYPOINT ANIMATIONS
 if (jQuery(window).width() > 480) {	
