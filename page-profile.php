@@ -18,16 +18,16 @@
                 <div class="center">
 
                     <div class="lay4_wrap<?php if (!is_active_sidebar('sidebar')) { ?> no_sidebar<?php } ?>">
-                        <div class="author_div" style="width: 100%; display: block;">
-                            <div
-                                class="author_left"><?php echo get_avatar($current_user->ID, $size = '100'); ?></div>
+                        <div class="author_div" style="width: 95%; display: block; padding: 10px;">
+                            <div class="author_left"><?php echo get_avatar($current_user->ID, $size = '100'); ?></div>
+
                             <div class="author_right">
                                 <h2><?php echo $current_user->display_name; ?></h2>
                                 <?php echo $current_user->user_description; ?>
                             </div>
-                        </div>
 
-                        <h3 class="author_posts"><?php _e('Moje príspevky ', 'asteria'); ?></h3>
+                            <h3 class="author_posts"><?php _e('Moje príspevky ', 'asteria'); ?></h3>
+                        </div>
 
                         <div class="lay4_inner">
 
