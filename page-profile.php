@@ -65,69 +65,39 @@
                                 $categories = get_the_category();
                                 ?>
 
-                                <h2 class="postitle"><?php the_title(); ?></h2>
-                                <?php
-                                if ($categories[0]->cat_ID == 7) { // audio
-                                    $shortcode = "[soundcloud id='" . get_the_content() . "' playerType='Standard']";
-                                    echo do_shortcode($shortcode);
-                                } else if ($categories[0]->cat_ID == 6) {// video
-                                    $url = get_the_content();
-                                    parse_str(parse_url($url, PHP_URL_QUERY), $my_array_of_vars);
-                                    $id = $my_array_of_vars['v'];
+                                <div class="post_content" style="float:center; display:inline">
+                                    <h2 class="postitle"><a href="<?php the_permalink(); ?>"
+                                                            title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                    </h2>
+
+                                    <?php switch ($categories[0]->cat_ID) {
+                                        case 4: // fotografia
+                                            require 'post-graphic.php';
+                                            break;
+                                        case 5: // grafika
+                                            require 'post-graphic.php';
+                                            break;
+                                        case 6: // video
+                                            require 'post-video.php';
+                                            break;
+                                        case 7: // audio
+                                            require 'post-audio.php';
+                                            break;
+                                        case 8: // web
+                                            require 'post-graphic.php';
+                                            break;
+                                        case 9: // text
+                                            require 'post-text.php';
+                                            break;
+                                        case 76: // sutaz
+                                            require 'post-graphic.php';
+                                            break;
+                                        case 77: // klub
+                                            require 'post-text.php';
+                                            break;
+                                    }
                                     ?>
-                                    <object width="400" height="225"> 
-                                        <param name="movie" value="https://www.youtube.com/v/<?php echo $id; ?>?version=3"></param> 
-                                        <param name="allowFullScreen" value="true"></param> 
-                                        <param name="allowScriptAccess" value="always"></param> 
-                                        <embed src="https://www.youtube.com/v/<?php echo $id; ?>?version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="400" height="225"></embed> 
-                                    </object>
-                                    <?php
-                                } else if ($categories[0]->cat_ID == 5) {//grafika
-                                    ?>
-                                    <img src="<?php echo getphpthumburl(get_the_content(), 'h=225&w=400&zc=1'); ?>" alt="<?php echo get_the_title(); ?>" width="400" height="225" />
-                                    <?php
-                                } else if ($categories[0]->cat_ID == 76) {//sutaz
-                                    ?>
-                                    <img src="<?php echo getphpthumburl(get_the_content(), 'h=225&w=400&zc=1'); ?>" alt="<?php echo get_the_title(); ?>" width="400" height="225" />
-                                    <?php
-                                }	else if ($categories[0]->cat_ID == 8) {//web
-                                ?>	<img src="<?php echo getphpthumburl(get_the_content(), 'h=225&w=400&zc=1'); ?>" alt="<?php echo get_the_title(); ?>" width="400" height="225" />
-									<?php
-								}	else if ($categories[0]->cat_ID == 9) {//text
-                                ?>  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( ); ?>"><text style="color:#a9a9a9; font-size:10"><i class="fa-book"></i> Čítať</a>
-									<?php the_excerpt(); ?> 
-									<?php
-								}	else if ($categories[0]->cat_ID == 4) {//fotografia
-								?>	<img src="<?php echo getphpthumburl(get_the_content(), 'h=225&w=400&zc=1'); ?>" alt="<?php echo get_the_title(); ?>" width="400" height="225" />
-									<?php
-								}
-								?>
-                                <!--POST INFO START-->
-                                <div class="single_metainfo" >
-									
-                                    <i class="fa-calendar"></i><a class="comm_date"><?php the_time(get_option('date_format')); ?></a>
-                                    <i class="fa-user"></i><a class="meta_auth"><?php the_author(); ?></a>
-                                    <!--<i class="fa-comments"></i><?php if (!empty($post->post_password)) { ?>
-                                    <?php } else { ?><div class="meta_comm"><?php comments_popup_link(__('0 Comment', 'asteria'), __('1 Comment', 'asteria'), __('% Comments', 'asteria'), '', __('Off', 'asteria')); ?></div><?php } ?>-->
-									<?php if( function_exists('dot_irecommendthis') ) dot_irecommendthis(); ?>
-								
-									<?php
-										$url = get_bloginfo('url');
-											if (current_user_can('edit_post', $post->ID)){
-											echo '<a class="delete-post" href="';
-											echo wp_nonce_url("$url/wp-admin/post.php?action=delete&post=$id", 'delete-post_' . $post->ID);
-											echo '"><i> Vymazať</i></a>';
-										  }
-									?>
-                                    
                                 </div>
-                                <!--POST INFO END-->
-
-                                <!--POST CONTENT START-->
-                                <?php// the_excerpt(); ?> 
-                                <!--POST CONTENT END-->
-
-
                             </div>
                         <?php endwhile ?> 
                         <?php wp_reset_postdata(); ?>
