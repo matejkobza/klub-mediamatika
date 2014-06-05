@@ -6,11 +6,11 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome/fontawesome-webfont.eot');
-  src:  url('../fonts/fontawesome/fontawesome-webfont.svg#fontawesomeregular') format('svg'),
-  url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), 
-  url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'), 
-  url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype');
+  src: url('fontawesome/fontawesome-webfont.eot');
+  src:  url('fontawesome/fontawesome-webfont.svg#fontawesomeregular') format('svg'),
+  url('fontawesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fontawesome/fontawesome-webfont.woff') format('woff'),
+  url('fontawesome/fontawesome-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -1346,11 +1346,11 @@
 
 @font-face {
   font-family: 'zocial';
-  src: url('../fonts/zocial/zocial.eot?82441995');
-  src: url('../fonts/zocial/zocial.svg?82441995#zocial') format('svg'),
-  	   url('../fonts/zocial/zocial.eot?82441995#iefix') format('embedded-opentype'),
-       url('../fonts/zocial/zocial.woff?82441995') format('woff'),
-       url('../fonts/zocial/zocial.ttf?82441995') format('truetype');
+  src: url('zocial/zocial.eot?82441995');
+  src: url('zocial/zocial.svg?82441995#zocial') format('svg'),
+  	   url('zocial/zocial.eot?82441995#iefix') format('embedded-opentype'),
+       url('zocial/zocial.woff?82441995') format('woff'),
+       url('zocial/zocial.ttf?82441995') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
