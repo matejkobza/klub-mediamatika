@@ -23,7 +23,6 @@
                         <?php
                         $args = array(
                             'post_type' => 'post',
-//                            'cat' => '' . $asteria['blog_cat_id'] . '',
                             'cat' => '5',
                             'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
                             'posts_per_page' => '3');
