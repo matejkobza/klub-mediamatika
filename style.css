@@ -506,6 +506,7 @@ body .header4 .bigmenu ul li:hover {
     margin: 0px;
     width: 100%;
     float: left;
+    font-size: 25px;
 
 }
 
@@ -577,7 +578,7 @@ body .header4 .bigmenu ul li:hover {
     margin: 0;
     width: 380px;
     padding: 15px;
-    font-size: 25px;
+    font-size: 18px;
     float: left;
 }
 
