@@ -24,7 +24,7 @@
                             <i class="fa-calendar"></i><a class="comm_date"><?php the_time( get_option('date_format') ); ?></a>
                             <i class="fa-user"></i><?php global $authordata; $post_author = "<a class='auth_meta' href=\"".get_author_posts_url( $authordata->ID, $authordata->user_nicename )."\">".get_the_author()."</a>\r\n"; echo $post_author; ?>
                             <i class="fa-comments"></i><?php if (!empty($post->post_password)) { ?>
-                        <?php } else { ?><div class="meta_comm"><?php comments_popup_link( __('0 Komentárov', 'asteria'), __('1 Komentár', 'asteria'), __('2 Komentáre', 'asteria'), __('3 Komentáre', 'asteria'), __('4 Komentáre Comments', 'asteria'), __('% Comments', 'asteria'), '', __('Off' , 'asteria')); ?></div><?php } ?>
+                        <?php } else { ?><div class="meta_comm"><?php comments_popup_link( __('0 Komentárov', 'asteria'), __('1 Komentár', 'asteria'), __('2 Komentáre', 'asteria'), __('3 Komentáre', 'asteria'), __('4 Komentáre', 'asteria'), __('% Komentáre', 'asteria'), '', __('Off' , 'asteria')); ?></div><?php } ?>
                         	<?php
           setPostViews(get_the_ID());
 ?>
