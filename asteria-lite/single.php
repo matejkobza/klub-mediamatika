@@ -53,7 +53,7 @@
                                     parse_str(parse_url($url, PHP_URL_QUERY), $my_array_of_vars);
                                     $id = $my_array_of_vars['v'];
                                     ?>
-                                    <object width="400" height="225"> 
+                                    <object width="640" height="360">
                                         <param name="movie" value="https://www.youtube.com/v/<?php echo $id; ?>?version=3"></param> 
                                         <param name="allowFullScreen" value="true"></param> 
                                         <param name="allowScriptAccess" value="always"></param> 
@@ -62,21 +62,21 @@
                                     <?php
                                 } else if ($categories[0]->cat_ID == 5) {//grafika
                                     ?>
-                                    <img src="<?php echo getphpthumburl(get_the_content()); ?>" alt="<?php echo get_the_title(); ?>" width="400" height="225" />
+                                    <img src="<?php echo getphpthumburl(get_the_content()); ?>" alt="<?php echo get_the_title(); ?>"  />
                                     <?php
                                 } else if ($categories[0]->cat_ID == 76) {//sutaz
                                     ?>
-                                    <img src="<?php echo getphpthumburl(get_the_content(), 'h=225&w=400&zc=1'); ?>" alt="<?php echo get_the_title(); ?>" width="400" height="225" />
+                                    <img src="<?php echo getphpthumburl(get_the_content(), ); ?>" alt="<?php echo get_the_title(); ?>"  />
                                     <?php
                                 } else if ($categories[0]->cat_ID == 8) {//web
-                                ?>	<img src="<?php echo getphpthumburl(get_the_content(), 'h=225&w=400&zc=1'); ?>" alt="<?php echo get_the_title(); ?>" width="400" height="225" />
+                                ?>	<img src="<?php echo getphpthumburl(get_the_content(),); ?>" alt="<?php echo get_the_title(); ?>"  />
 									<?php
 								}	else if ($categories[0]->cat_ID == 9) {//text
                                 ?>  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( ); ?>"><text style="color:#a9a9a9; font-size:10"><i class="fa-book"></i> Čítať</a>
 									<?php the_excerpt(); ?> 
 									<?php
 								}	else if ($categories[0]->cat_ID == 4) {//fotografia
-								?>	<img src="<?php echo getphpthumburl(get_the_content(), 'h=225&w=400&zc=1'); ?>" alt="<?php echo get_the_title(); ?>" width="400" height="225" />
+								?>	<img src="<?php echo getphpthumburl(get_the_content(), ); ?>" alt="<?php echo get_the_title(); ?>"  />
 									<?php
 								}
 								?>                        <!--POST CONTENT END-->
